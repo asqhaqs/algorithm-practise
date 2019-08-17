@@ -6,6 +6,12 @@ import edu.princeton.cs.algs4.StdOut;
 
 /**
  * 有向图的可达性API
+ * 多点可达性的一个重要应用是 典型的内存管理系统中，在java的内存实现中，一个顶点表示一个对象，一条边表示一个对象对另一
+ * 个的引用，标记-清除 的垃圾回收策略会为每一个对象保留一个标志位作垃圾回收使用，周期性的运行一个类似DirectedDFS的有向图
+ * 可达性算法来标记所有可以被访问到的对象，然后清理所有未被标记的对象
+ * DepthFirstPaths 和 BreadthFirstPaths 也是有向图的重要算法，他们主要解决以下问题：
+ * 单点有向路径：“从s到给定目的定点v是否有一条有向路径”
+ * 单点最短有向路径： “从s到给定目的顶点是否有一条有向路径， 如果有，找出最短路径”
  * Created by xudong on 2019/8/17.
  */
 public class DirectedDFS {
@@ -17,6 +23,7 @@ public class DirectedDFS {
         dfs(G, s);
     }
 
+    // 多个起始点的情况
     public DirectedDFS(Digraph G, Iterable<Integer> sources){
         marked = new boolean[G.V()];
         for(int s: sources){
