@@ -23,6 +23,8 @@ public class Topological {
     }
 
     public static void main(String[] args) {
+        int[] nums = new int[10];
+        System.out.println(nums.length);
 
     }
 }
