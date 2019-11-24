@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.MinPQ;
 import edu.princeton.cs.algs4.Queue;
 
 /**
- * 最小生成树 prim算法
+ * 最小生成树 prim算法（延迟处理版， 空间占据较大）
  */
 
 public class LazyPrimMST {
